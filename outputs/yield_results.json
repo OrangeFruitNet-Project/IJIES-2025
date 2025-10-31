@@ -1,0 +1,6 @@
+[
+  {"Orchard Block": "Block 1", "Expert Count": 1250, "Predicted Count": 1210, "Error (%)": 3.2, "Correlation (R²)": 0.92},
+  {"Orchard Block": "Block 2", "Expert Count": 1480, "Predicted Count": 1450, "Error (%)": 2.0, "Correlation (R²)": 0.94},
+  {"Orchard Block": "Block 3", "Expert Count": 1320, "Predicted Count": 1300, "Error (%)": 1.5, "Correlation (R²)": 0.91},
+  {"Overall", "Expert Count": 4050, "Predicted Count": 3960, "Error (%)": 2.2, "Correlation (R²)": 0.93}
+]

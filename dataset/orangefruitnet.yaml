@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['flower', 'green orange', 'orange']
+
+roboflow:
+  workspace: fruit-estimations
+  project: orange-fruit-counting
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/fruit-estimations/orange-fruit-counting/dataset/3

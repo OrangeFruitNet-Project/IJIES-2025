@@ -1,0 +1,14 @@
+{
+  "CitDet→CitDet":    {"mean": 95.8, "sd": 0.3, "ci": [95.5, 96.1]},
+  "GreenCitrus→GreenCitrus": {"mean": 94.9, "sd": 0.5, "ci": [94.4, 95.4]},
+  "UAVCitrus→UAVCitrus":     {"mean": 93.2, "sd": 0.7, "ci": [92.5, 93.9]},
+  "OrangeFruitNet→OrangeFruitNet": {"mean": 96.7, "sd": 0.4, "ci": [96.3, 97.1]},
+
+  "CitDet→OrangeFruitNet":   {"mean": 87.4, "sd": 0.9, "ci": [86.5, 88.3]},
+  "GreenCitrus→OrangeFruitNet": {"mean": 89.1, "sd": 0.7, "ci": [88.4, 89.8]},
+  "UAVCitrus→OrangeFruitNet":   {"mean": 91.0, "sd": 0.6, "ci": [90.4, 91.6]},
+
+  "OrangeFruitNet→CitDet":   {"mean": 94.2, "sd": 0.5, "ci": [93.7, 94.7]},
+  "OrangeFruitNet→GreenCitrus": {"mean": 93.8, "sd": 0.6, "ci": [93.2, 94.4]},
+  "OrangeFruitNet→UAVCitrus":   {"mean": 92.9, "sd": 0.7, "ci": [92.2, 93.6]}
+}

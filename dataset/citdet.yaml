@@ -1,0 +1,19 @@
+# citdet.yaml
+# CitDet: A Benchmark Dataset for Citrus Fruit Detection
+# Source: James et al. (2023/24) — 579 images, over 32,000 bounding boxes. :contentReference[oaicite:1]{index=1}
+
+path: ../dataset/citdet
+
+train: images/train
+val: images/valid
+test: images/test
+
+nc: 3
+names: ['flower', 'immature fruit', 'mature fruit']
+
+source:
+  citation: "James, J. A. et al. “CitDet: A Benchmark Dataset for Citrus Fruit Detection.” IEEE RA-L, vol 9, no 12, pp 10788-10795, 2024." :contentReference[oaicite:2]{index=2}
+  license: CC BY-NC-SA 4.0 :contentReference[oaicite:3]{index=3}
+  url: https://robotic-vision-lab.github.io/citdet/ :contentReference[oaicite:4]{index=4}
+
+download: https://agdatacommons.nal.usda.gov/articles/dataset/Data_from_CitDet_a_benchmark_dataset_for_citrus_fruit_detection/24669006 :contentReference[oaicite:5]{index=5}

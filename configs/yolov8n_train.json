@@ -1,0 +1,9 @@
+{
+  "model_name": "yolov8n.pt",
+  "data_yaml": "../data/OrangeFruitNet/data.yaml",
+  "epochs": 200,
+  "batch": 16,
+  "project": "../runs/train",
+  "base_exp_name": "yolov8n_ofn",
+  "seeds": [42, 84, 126]
+}

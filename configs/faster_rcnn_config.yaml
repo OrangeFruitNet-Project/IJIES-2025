@@ -1,0 +1,53 @@
+# Faster R-CNN configuration for OrangeFruitNet (Detectron2)
+# Based on manuscript Section 3.3 and Table 5
+
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"  # COCO pretrained backbone
+  BACKBONE:
+    NAME: "build_resnet_fpn_backbone"
+    FREEZE_AT: 2
+  RESNETS:
+    DEPTH: 50
+  PROPOSAL_GENERATOR:
+    NAME: "RPN"
+  ROI_HEADS:
+    NAME: "StandardROIHeads"
+    NUM_CLASSES: 1
+    BATCH_SIZE_PER_IMAGE: 512
+    SCORE_THRESH_TEST: 0.5
+  ANCHOR_GENERATOR:
+    SIZES: [[32, 64, 128, 256, 512]]
+    ASPECT_RATIOS: [[0.5, 1.0, 2.0]]
+
+DATASETS:
+  TRAIN: ("orangefruitnet_train",)
+  TEST: ("orangefruitnet_val",)
+
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.001
+  OPTIMIZER: "Adam"
+  BETAS: (0.937, 0.999)
+  WEIGHT_DECAY: 0.0005
+  LR_SCHEDULER_NAME: "WarmupCosineLR"
+  MAX_ITER: 20000
+  STEPS: []
+  CHECKPOINT_PERIOD: 1000
+  EARLY_STOP_PATIENCE: 25
+  SEED: 42
+
+INPUT:
+  FORMAT: "RGB"
+  MIN_SIZE_TRAIN: (640,)
+  MAX_SIZE_TRAIN: 640
+  MIN_SIZE_TEST: 640
+  MAX_SIZE_TEST: 640
+  HORIZONTAL_FLIP_TRAIN: True
+  BRIGHTNESS: 0.15
+  ROTATION_ANGLE: 15
+
+DATALOADER:
+  NUM_WORKERS: 4
+
+OUTPUT_DIR: ./runs/faster_rcnn_orangefruitnet

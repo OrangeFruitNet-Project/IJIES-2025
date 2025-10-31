@@ -1,0 +1,42 @@
+{
+  "YOLOv4": {
+    "runs": [
+      {"seed": 42, "precision": 92.6, "recall": 93.4, "f1": 93.0, "map50": 93.1, "fps": 41.5},
+      {"seed": 84, "precision": 92.9, "recall": 93.6, "f1": 93.2, "map50": 92.8, "fps": 41.0},
+      {"seed": 126, "precision": 92.8, "recall": 93.5, "f1": 93.1, "map50": 93.0, "fps": 41.2}
+    ],
+    "aggregate": {"mean_map50": 93.0, "sd": 0.15, "ci": [92.8, 93.2]}
+  },
+  "YOLOv5-s": {
+    "runs": [
+      {"seed": 42, "precision": 95.3, "recall": 95.7, "f1": 95.5, "map50": 95.7, "fps": 65.1},
+      {"seed": 84, "precision": 95.4, "recall": 95.6, "f1": 95.5, "map50": 95.8, "fps": 65.3},
+      {"seed": 126, "precision": 95.5, "recall": 95.8, "f1": 95.6, "map50": 95.9, "fps": 65.5}
+    ],
+    "aggregate": {"mean_map50": 95.8, "sd": 0.10, "ci": [95.7, 95.9]}
+  },
+  "YOLOv8-n": {
+    "runs": [
+      {"seed": 42, "precision": 95.9, "recall": 96.2, "f1": 96.0, "map50": 97.1, "fps": 71.6},
+      {"seed": 84, "precision": 96.0, "recall": 96.3, "f1": 96.1, "map50": 97.3, "fps": 71.9},
+      {"seed": 126, "precision": 95.8, "recall": 96.3, "f1": 96.1, "map50": 97.2, "fps": 71.8}
+    ],
+    "aggregate": {"mean_map50": 97.2, "sd": 0.10, "ci": [97.1, 97.3]}
+  },
+  "Faster R-CNN": {
+    "runs": [
+      {"seed": 42, "precision": 91.8, "recall": 93.9, "f1": 92.8, "map50": 94.0, "fps": 28.3},
+      {"seed": 84, "precision": 92.1, "recall": 93.7, "f1": 92.9, "map50": 94.2, "fps": 28.5},
+      {"seed": 126, "precision": 92.0, "recall": 93.8, "f1": 92.9, "map50": 94.1, "fps": 28.4}
+    ],
+    "aggregate": {"mean_map50": 94.1, "sd": 0.10, "ci": [94.0, 94.2]}
+  },
+  "Mask R-CNN": {
+    "runs": [
+      {"seed": 42, "precision": 91.0, "recall": 92.5, "f1": 91.8, "map50": 92.9, "fps": 25.6},
+      {"seed": 84, "precision": 91.3, "recall": 92.7, "f1": 91.9, "map50": 93.1, "fps": 25.8},
+      {"seed": 126, "precision": 91.2, "recall": 92.6, "f1": 91.9, "map50": 93.0, "fps": 25.7}
+    ],
+    "aggregate": {"mean_map50": 93.0, "sd": 0.10, "ci": [92.9, 93.1]}
+  }
+}

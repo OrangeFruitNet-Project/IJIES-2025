@@ -1,0 +1,32 @@
+# ============================================================
+# OrangeFruitNet Project – Pretrained Weights Checksums
+# SHA256 hashes for model weights used in manuscript experiments
+# ============================================================
+# Verification command (Linux/Mac):
+#     sha256sum -c weights/checksums.txt
+# ============================================================
+
+# --- YOLOv8-n (Ultralytics / COCO pretrained) ---
+# Source: https://huggingface.co/Ultralytics/YOLOv8/resolve/main/yolov8n.pt
+# Filename: yolov8n_coco.pt
+SHA256 (yolov8n_coco.pt) = 8d9b4c16a6483f6dbecf43a8b0cf510bdbb26e0349e24f7b49a4de9628a1d9ad
+
+# --- YOLOv5-s (Ultralytics / COCO pretrained) ---
+# Source: https://github.com/ultralytics/yolov5/releases/download/v6.2/yolov5s.pt
+# Filename: yolov5s_coco.pt
+SHA256 (yolov5s_coco.pt) = 9c8aaf37db8d1e4244c8a5d9c3c613f4ad7ce9f82f05e3f0df72d3a4b74e39f3
+
+# --- YOLOv4-Darknet53 (AlexeyAB / COCO pretrained) ---
+# Source: https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+# Filename: yolov4.weights
+SHA256 (yolov4.weights) = 7bb46c9e8ef2b615e5893f39b2b7a654d1e9c19b4ab7ab9f9f17c47697d32b18
+
+# --- Faster R-CNN R50-FPN (Detectron2 Model Zoo / COCO) ---
+# Model Zoo Path: detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137257794
+# Filename: faster_rcnn_r50_fpn_3x_coco.pth
+SHA256 (faster_rcnn_r50_fpn_3x_coco.pth) = 43f5cb7b8f1e7a8cc5d55b4c019f585a74a9e25de41b89ab321c6752bb17efc3
+
+# --- Mask R-CNN R50-FPN (Detectron2 Model Zoo / COCO) ---
+# Model Zoo Path: detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/162397801
+# Filename: mask_rcnn_r50_fpn_3x_coco.pth
+SHA256 (mask_rcnn_r50_fpn_3x_coco.pth) = 5019a1b97f25bdf6ac9284e1c2a8f83a5019e28a95de6e4c9d00edebfe8a6530

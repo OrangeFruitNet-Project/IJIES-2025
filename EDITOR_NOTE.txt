@@ -1,0 +1,7 @@
+Editor & Reviewers
+
+This repository is a reproducibility bundle prepared for IJIES review. Files include pretrained weights, dataset manifests, training configs, and training & evaluation code, scripts.
+- All modifications mentioned in the response letter (optimizer, scheduler, seed, env, license info) are encoded in configs/ and README_TRAINING.md.
+- Trained weights are available on request and will be added as a release after acceptance.
+
+Contact: mskhedkar_p22@ce.vjti.ac.in

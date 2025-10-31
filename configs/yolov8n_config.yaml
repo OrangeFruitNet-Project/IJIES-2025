@@ -1,0 +1,45 @@
+# YOLOv8 training configuration (used for experiments reported in the manuscript)
+# Corresponds to Section 3.3 of the manuscript
+
+# Dataset and model
+path: ../dataset
+model: yolov8n.pt             # YOLOv8 variant (yolov8n.pt or yolov8s.pt)
+imgsz: 640
+batch: 16
+epochs: 200
+
+# Optimization parameters
+optimizer: Adam
+lr0: 0.001                    # Initial learning rate
+momentum: 0.937               # Adam β1
+# Note: Adam β2 = 0.999 (default in Ultralytics implementation; included per manuscript)
+weight_decay: 0.0005
+scheduler: cosine             # Cosine annealing
+seed: 42
+
+# Pretrained weights
+pretrained: ../weights/yolov8_coco.pt
+
+# Augmentation settings
+augment: True
+degrees: 15                   # Rotation (±15°)
+fliplr: 0.5                   # Horizontal flip probability
+flipud: 0.0                   # No vertical flip
+brightness: [0.85, 1.15]      # Brightness scaling ±15%
+mosaic: 1.0                   # Enable mosaic augmentation
+anchor_auto: True
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+
+# Runtime & saving options
+workers: 4
+save_period: 10
+patience: 25                  # Early stop after 25 epochs of no improvement
+device: 0
+
+# Logging and output
+project: ./runs/train
+name: orangefruitnet_yolov8n
+exist_ok: True
+

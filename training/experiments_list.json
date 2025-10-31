@@ -1,0 +1,138 @@
+{
+  "experiments": [
+    {
+      "name": "YOLOv4_OrangeFruitNet",
+      "framework": "darknet",
+      "config": {
+        "dataset": "../dataset",
+        "model": "yolov4",
+        "imgsz": 640,
+        "batch_size": 16,
+        "epochs": 200,
+        "optimizer": "Adam",
+        "lr": 0.001,
+        "beta1": 0.937,
+        "beta2": 0.999,
+        "scheduler": "cosine_annealing",
+        "seed": 42,
+        "pretrained": "../weights/yolov4_coco.weights",
+        "augmentations": {
+          "flip": true,
+          "rotation": 15,
+          "brightness": [0.85, 1.15]
+        },
+        "early_stop": 25,
+        "workers": 4,
+        "save_period": 10
+      }
+    },
+    {
+      "name": "YOLOv5s_OrangeFruitNet",
+      "framework": "ultralytics",
+      "config": {
+        "dataset": "../dataset",
+        "model": "yolov5s",
+        "imgsz": 640,
+        "batch_size": 16,
+        "epochs": 200,
+        "optimizer": "Adam",
+        "lr": 0.001,
+        "beta1": 0.937,
+        "beta2": 0.999,
+        "scheduler": "cosine_annealing",
+        "seed": 42,
+        "pretrained": "../weights/yolov5_coco.pt",
+        "augmentations": {
+          "mosaic": true,
+          "flip": true,
+          "rotation": 15,
+          "brightness": [0.85, 1.15]
+        },
+        "anchor": "auto",
+        "early_stop": 25,
+        "workers": 4,
+        "save_period": 10
+      }
+    },
+    {
+      "name": "YOLOv8n_OrangeFruitNet",
+      "framework": "ultralytics",
+      "config": {
+        "dataset": "../dataset",
+        "model": "yolov8n",
+        "imgsz": 640,
+        "batch_size": 16,
+        "epochs": 200,
+        "optimizer": "Adam",
+        "lr": 0.001,
+        "beta1": 0.937,
+        "beta2": 0.999,
+        "scheduler": "cosine_annealing",
+        "seed": 42,
+        "pretrained": "../weights/yolov8_coco.pt",
+        "augmentations": {
+          "mosaic": true,
+          "flip": true,
+          "rotation": 15,
+          "brightness": [0.85, 1.15]
+        },
+        "anchor": "auto",
+        "early_stop": 25,
+        "workers": 4,
+        "save_period": 10
+      }
+    },
+    {
+      "name": "FasterRCNN_OrangeFruitNet",
+      "framework": "detectron2",
+      "config": {
+        "dataset": "../dataset",
+        "model": "FasterRCNN_R50_FPN_3x",
+        "imgsz": 640,
+        "batch_size": 16,
+        "epochs": 200,
+        "optimizer": "Adam",
+        "lr": 0.001,
+        "beta1": 0.937,
+        "beta2": 0.999,
+        "scheduler": "cosine_annealing",
+        "seed": 42,
+        "pretrained": "../weights/fasterrcnn_coco.pkl",
+        "augmentations": {
+          "flip": true,
+          "rotation": 15,
+          "brightness": [0.85, 1.15]
+        },
+        "early_stop": 25,
+        "workers": 4,
+        "save_period": 10
+      }
+    },
+    {
+      "name": "MaskRCNN_OrangeFruitNet",
+      "framework": "detectron2",
+      "config": {
+        "dataset": "../dataset",
+        "model": "MaskRCNN_R50_FPN_3x",
+        "imgsz": 640,
+        "batch_size": 16,
+        "epochs": 200,
+        "optimizer": "Adam",
+        "lr": 0.001,
+        "beta1": 0.937,
+        "beta2": 0.999,
+        "scheduler": "cosine_annealing",
+        "seed": 42,
+        "pretrained": "../weights/maskrcnn_coco.pkl",
+        "augmentations": {
+          "flip": true,
+          "rotation": 15,
+          "brightness": [0.85, 1.15]
+        },
+        "early_stop": 25,
+        "workers": 4,
+        "save_period": 10
+      }
+    }
+  ]
+}

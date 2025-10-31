@@ -1,0 +1,19 @@
+# greencitrus.yaml
+# Green Citrus / Green fruit detection dataset
+# Based on Fu et al. (2024) – 557 images of green oranges under similar background. :contentReference[oaicite:7]{index=7}
+
+path: ../dataset/greencitrus
+
+train: images/train
+val: images/valid
+test: images/test
+
+nc: 3
+names: ['flower', 'green fruit', 'ripe fruit']
+
+source:
+  citation: "Fu, X. et al. “Green Fruit Detection with a Small Dataset under a Similar Color Background Based on the Improved YOLOv5-AT.” Foods 13(7):1060 (2024)." :contentReference[oaicite:8]{index=8}
+  license: CC BY 4.0
+  url: https://doi.org/10.3390/foods13071060 :contentReference[oaicite:9]{index=9}
+
+download: [link to dataset – check paper supplementary materials]

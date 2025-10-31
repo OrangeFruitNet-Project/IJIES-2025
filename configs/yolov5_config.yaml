@@ -1,0 +1,42 @@
+# YOLOv5 training config (used for experiments reported in the manuscript Section 3.3)
+dataset: ../dataset  # path to dataset root (images/ and annotations/)
+
+
+# Dataset and model
+model: yolov5s  # variants used: yolov5s, yolov5m
+imgsz: 640
+batch: 16
+epochs: 200
+
+# Optimization parameters
+optimizer: Adam
+lr0: 0.001                      # initial learning rate
+momentum: 0.937                 # Adam β1
+# Note: Adam β2 = 0.999 (default in YOLOv5 code; included here for transparency)
+weight_decay: 0.0005
+cos_lr: True                    # cosine annealing scheduler
+seed: 42
+
+# Pretrained weights
+weights: ../weights/yolov5_coco.pt
+
+# Data augmentation settings (manually aligned with Section 3.2 of manuscript)
+augment: True
+degrees: 15                     # Rotation ±15°
+fliplr: 0.5                     # Horizontal flip
+flipud: 0.0                     # No vertical flip
+brightness: [0.85, 1.15]        # Brightness adjustment ±15%
+mosaic: 1.0                     # Enable mosaic augmentation
+anchor_auto: True               # Auto-anchor generation
+
+# Runtime and saving
+workers: 4
+save_period: 10                 # save checkpoints every 10 epochs
+patience: 25                    # early stopping after 25 epochs no improvement
+device: 0
+
+# Logging and project output
+project: ./runs/train
+name: orangefruitnet_yolov5s
+exist_ok: True
+
